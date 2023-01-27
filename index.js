@@ -1,7 +1,7 @@
 const { Telegraf } = require('telegraf');
 const axios = require("axios");
 
-const bot = new Telegraf('5866857954:AAE1VkS-AHZVjf6dnuaD7lzYrObzKweiTME');
+const bot = new Telegraf('5812635735:AAF8vZhD-J4356RrHPEXzw-8iuEwRyuJYKU');
 bot.start((ctx) => ctx.reply('Welcome'));
 bot.on('message', async (ctx)=>{
     const url = `https://api.dictionaryapi.dev/api/v2/entries/en/${ctx.message.text}`

@@ -7,11 +7,9 @@ bot.on('message', async (ctx) => {
    try{
        const url = `https://api.dictionaryapi.dev/api/v2/entries/en/${ctx.message.text}`
         const response = await axios.get(url);
-       console.log(response)
-           ctx.reply(`Your answer(s): `)
            response.data.map(elem => elem.meanings[0].definitions.map((elem) => ctx.reply(`${elem.definition}`)))
    } catch (e) {
-       console.error(e)
+       console.log(e)
        ctx.reply('No definition found')
    }
 })
